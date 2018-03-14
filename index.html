@@ -37,4 +37,17 @@
     font-family: monospace;
     font-size: 1.2rem;
 " href="https://github.com/solovev/solovev.github.io/tree/master/SoAI/src/Logic">Исходный код</a>
+      <script>
+            window.onload = function () {
+                  var button = document.querySelector('[data-number="5"]')
+                  button.addEventListener('click', function () {
+                    setTimeout(function () {
+                        var header = document.getElementById('app').querySelector('div')
+                        if (header.textContent === 'Pattern recognition') {
+                              header.textContent += ' (F12 (Console) -> "loadDigits()" / "loadShapes()")'
+                        }
+                    }, 200)
+                  })
+            }
+      </script>
       </body></html>
