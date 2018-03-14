@@ -40,9 +40,11 @@
       <script>
             window.onload = function () {
                   var button = document.querySelector('[data-number="5"]')
-                  button.addEventListener('click', function () {
+                  button && button.addEventListener('click', function () {
                     setTimeout(function () {
                         var header = document.getElementById('app').querySelector('div')
+                        if (!header) return
+
                         if (header.textContent === 'Pattern recognition') {
                               header.textContent += ' (F12 (Console) -> "loadDigits()" / "loadShapes()")'
                         }
